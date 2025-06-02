@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💔 ¿Cansada de Elegir Mal? - ¡Descarga GRATIS Tu Guía!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-shadow { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .btn-hover:hover { transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .pulse-animation { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .error-message { font-size: 0.875rem; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn { animation: fadeIn 0.6s ease-out; }
+        .fa-spinner { animation: spin 1s linear infinite; }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Hero Section -->
+    <div class="gradient-bg min-h-screen flex items-center justify-center px-4 py-12 md:py-0">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Column - Content -->
+                <div class="text-white">
+                    <div class="mb-6">
+                        <span class="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
+                            <i class="fas fa-gift mr-2"></i> GUÍA GRATUITA
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        <span class="block">¿Cansada de Elegir</span>
+                        <span class="block text-yellow-300">Relaciones Tóxicas?</span>
+                        <span class="block">¡Sana Tu Apego Ahora!</span>
+                    </h1>
+                    
+                    <p class="text-xl mb-8 text-gray-200">
+                        La guía definitiva para entender tus patrones de relación, sanar tu apego ansioso y construir relaciones saludables. ¡Descubre los 13 secretos para dejar atrás el miedo y la soledad! 💖
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-magnifying-glass-chart text-green-400 mr-3 text-xl"></i>
+                            <span>Descubre tu estilo de apego y cómo te afecta.</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-key text-green-400 mr-3 text-xl"></i>
+                            <span>13 secretos para sanar heridas emocionales.</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-heart-crack text-green-400 mr-3 text-xl"></i>
+                            <span>Supera celos, miedos y relaciones dañinas.</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-spa text-green-400 mr-3 text-xl"></i>
+                            <span>Guía práctica para el amor propio y relaciones sanas.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-2xl font-bold text-yellow-300">
+                        ¡100% GRATIS - Sin costos ocultos!
+                    </div>
+                </div>
+                
+                <!-- Right Column - Form -->
+                <div class="bg-white rounded-2xl p-8 card-shadow">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                            ¡Descarga Tu Guía Ahora!
+                        </h3>
+                        <p class="text-gray-600">
+                            Ingresa tus datos y recibe al instante la guía completa.
+                        </p>
+                    </div>
+                    
+                    <form id="leadForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-user mr-2 text-gray-500"></i>Nombre Completo
+                            </label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                                   placeholder="Tu nombre completo">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-envelope mr-2 text-gray-500"></i>Correo Electrónico
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                                   placeholder="tu.email@ejemplo.com">
+                        </div>
+                        
+                        <!-- Hidden Fields -->
+                        <input type="hidden" id="language" name="language" value="Spanish">
+                        <input type="hidden" name="book_title" value="¿Por Qué Siempre Elijo Cabrones? Guía de Estilos de Apego MANÍACOS: 13 Secretos para Sanar Tu Apego Ansioso entre Relaciones Tóxicas, Celos y el Miedo a Quedarte Solterona">
+                        <input type="hidden" name="main_category" value="Relationships">
+                        <input type="hidden" name="author" value="Jessica K.">
+                        <input type="hidden" name="number_title" value="23. Why Do I Always Pick Assholes? A Guide to MANIACAL Attachment Styles">
+                        <input type="hidden" name="number_title_language" value="23. Why Do I Always Pick Assholes? A Guide to MANIACAL Attachment Styles (Spanish)">
+                        <input type="hidden" name="extra_folder_link" value="https://drive.google.com/drive/folders/1F8HVYZIbIoqEdzoQNBLvdeG4_mysftiE">
+                        <input type="hidden" name="extra_pdf_link" value="https://drive.google.com/uc?export=download&id=1bsU2CyJiBcl8l7uENKtNjOqCikkPa1p9">
+                        <input type="hidden" name="review_link" value="https://pxl.to/23-qsecgdedam-jk-es-review">
+
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-6 rounded-lg btn-hover pulse-animation">
+                            <i class="fas fa-download mr-2"></i>
+                            ¡OBTENER GUÍA GRATIS AHORA!
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-xs text-gray-500">
+                            <i class="fas fa-lock mr-1"></i>
+                            Tus datos están seguros y nunca serán compartidos con terceros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Features Section -->
+    <div class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    ¿Qué Encontrarás en Esta Guía?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Una guía completa y práctica para transformar tu vida amorosa y sanar desde dentro.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-blue-50 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Autoconocimiento Profundo</h3>
+                    <p class="text-gray-600">
+                        Identifica tus patrones de apego y cómo influyen en tus elecciones de pareja.
+                    </p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-green-50 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hand-holding-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Sanación Emocional</h3>
+                    <p class="text-gray-600">
+                        Aprende 13 secretos prácticos para sanar heridas, superar celos y miedos.
+                    </p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-purple-50 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-people-arrows text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Relaciones Saludables</h3>
+                    <p class="text-gray-600">
+                        Estrategias para romper ciclos tóxicos y construir vínculos basados en el amor propio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Testimonials Section -->
+    <div class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    Lo Que Dicen Nuestras Lectoras
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg card-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4 text-white font-bold text-lg">
+                            L
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Laura G.</h4>
+                            <p class="text-gray-600 text-sm">Transformó su vida amorosa</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "¡Esta guía me abrió los ojos! Estaba atrapada en un ciclo de relaciones tóxicas. Ahora entiendo por qué y cómo cambiarlo. ¡Gracias!"
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg card-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 text-white font-bold text-lg">
+                            S
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sofía M.</h4>
+                            <p class="text-gray-600 text-sm">Encontró la paz interior</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "Práctica y reveladora. No sabía por dónde empezar para sanar mi apego ansioso. Ahora me siento más segura y en control de mis emociones y relaciones."
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Final CTA -->
+    <div class="gradient-bg py-20">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold text-white mb-6">
+                ¡No Esperes Más! Descarga Tu Guía Transformadora Ahora
+            </h2>
+            <p class="text-xl text-gray-200 mb-8">
+                Miles de mujeres ya han transformado sus vidas con esta guía. ¡Únete a ellas y comienza tu viaje hacia relaciones más sanas y felices!
+            </p>
+            <a href="#leadForm" class="inline-block bg-yellow-400 text-black font-bold py-4 px-8 rounded-lg btn-hover text-lg">
+                <i class="fas fa-gift mr-2"></i>
+                ¡DESCARGAR GRATIS AHORA!
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Jessica K. Todos los derechos reservados.</p>
+            <p class="text-gray-400 text-sm mt-2">
+                <i class="fas fa-lock mr-1"></i>
+                Tus datos están seguros y protegidos.
+            </p>
+        </div>
+    </footer>
+
+<script>
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const submitButton = e.target.querySelector('button[type="submit"]');
+        const originalButtonHTML = submitButton.innerHTML;
+
+        // Clear previous error messages
+        const existingErrorMessages = e.target.querySelectorAll('.error-message');
+        existingErrorMessages.forEach(msg => msg.remove());
+        nameInput.classList.remove('border-red-500');
+        nameInput.classList.add('border-gray-300');
+        emailInput.classList.remove('border-red-500');
+        emailInput.classList.add('border-gray-300');
+
+        let isValid = true;
+
+        if (nameInput.value.trim().length < 2) {
+            isValid = false;
+            nameInput.classList.add('border-red-500');
+            nameInput.classList.remove('border-gray-300');
+            const errorMsg = document.createElement('p');
+            errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+            errorMsg.innerHTML = '<i class="fas fa-exclamation-circle mr-1"></i>El nombre debe tener al menos 2 caracteres.';
+            nameInput.parentNode.insertBefore(errorMsg, nameInput.nextSibling);
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+            isValid = false;
+            emailInput.classList.add('border-red-500');
+            emailInput.classList.remove('border-gray-300');
+            const errorMsg = document.createElement('p');
+            errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+            errorMsg.innerHTML = '<i class="fas fa-exclamation-circle mr-1"></i>Por favor, ingresa un correo electrónico válido.';
+            emailInput.parentNode.insertBefore(errorMsg, emailInput.nextSibling);
+        }
+
+        if (!isValid) {
+            submitButton.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i>POR FAVOR, REVISA TUS DATOS';
+            submitButton.classList.remove('from-blue-600', 'to-purple-600', 'bg-green-500', 'bg-red-500');
+            submitButton.classList.add('bg-orange-500');
+            submitButton.disabled = false; // Re-enable if validation fails on client side
+            setTimeout(() => {
+                submitButton.innerHTML = originalButtonHTML;
+                submitButton.classList.remove('bg-orange-500');
+                submitButton.classList.add('from-blue-600', 'to-purple-600');
+            }, 3000);
+            return;
+        }
+        
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>ENVIANDO...';
+        submitButton.disabled = true;
+        
+        const formData = {
+            name: nameInput.value,
+            email: emailInput.value,
+            language: document.getElementById('language').value,
+            book_title: document.querySelector('input[name="book_title"]').value,
+            main_category: document.querySelector('input[name="main_category"]').value,
+            author: document.querySelector('input[name="author"]').value,
+            number_title: document.querySelector('input[name="number_title"]').value,
+            number_title_language: document.querySelector('input[name="number_title_language"]').value,
+            extra_folder_link: document.querySelector('input[name="extra_folder_link"]').value,
+            extra_pdf_link: document.querySelector('input[name="extra_pdf_link"]').value,
+            review_link: document.querySelector('input[name="review_link"]').value
+        };
+        
+        try {
+            const response = await fetch('https://hook.integrator.boost.space/mqntylhrehljw4p5tkxjpxj28icglsot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            
+            if (response.ok) {
+                submitButton.innerHTML = '<i class="fas fa-check-circle mr-2"></i>¡ÉXITO! REDIRIGIENDO...';
+                submitButton.classList.remove('from-blue-600', 'to-purple-600', 'bg-orange-500', 'bg-red-500');
+                submitButton.classList.add('bg-green-500');
+                
+                setTimeout(() => {
+                    window.location.href = document.querySelector('input[name="extra_pdf_link"]').value;
+                }, 500); // Short delay for user to see success
+                
+            } else {
+                const errorData = await response.json().catch(() => ({ message: 'Error desconocido del servidor' }));
+                console.error('Error del servidor:', response.status, errorData);
+                throw new Error(`Error del servidor: ${response.status} - ${errorData.message || 'Inténtalo de nuevo.'}`);
+            }
+            
+        } catch (error) {
+            console.error('Error en el envío:', error);
+            submitButton.innerHTML = `<i class="fas fa-exclamation-triangle mr-2"></i>ERROR: ${error.message.includes('Failed to fetch') ? 'VERIFICA TU CONEXIÓN' : 'INTÉNTALO DE NUEVO'}`;
+            submitButton.classList.remove('from-blue-600', 'to-purple-600', 'bg-orange-500', 'bg-green-500');
+            submitButton.classList.add('bg-red-500');
+            
+            setTimeout(() => {
+                submitButton.innerHTML = originalButtonHTML;
+                submitButton.disabled = false;
+                submitButton.classList.remove('bg-red-500');
+                submitButton.classList.add('from-blue-600', 'to-purple-600');
+            }, 5000);
+        }
+    });
+
+    // Smooth scroll for CTA buttons
+    document.querySelectorAll('a[href="#leadForm"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetElement = document.getElementById('leadForm');
+            if (targetElement) {
+                targetElement.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center' 
+                });
+                setTimeout(() => {
+                    const firstInput = targetElement.querySelector('input[type="text"], input[type="email"]');
+                    if (firstInput) firstInput.focus();
+                }, 500);
+            }
+        });
+    });
+
+    // Instant validation on blur
+    document.getElementById('name').addEventListener('blur', function() {
+        const name = this.value.trim();
+        const existingError = this.parentElement.querySelector('.error-message');
+        if (existingError) existingError.remove();
+        this.classList.remove('border-red-500');
+        this.classList.add('border-gray-300');
+
+        if (name && name.length < 2) {
+            this.classList.add('border-red-500');
+            this.classList.remove('border-gray-300');
+            const errorMsg = document.createElement('p');
+            errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+            errorMsg.innerHTML = '<i class="fas fa-exclamation-circle mr-1"></i>El nombre debe tener al menos 2 caracteres.';
+            this.parentNode.insertBefore(errorMsg, this.nextSibling);
+        }
+    });
+
+    document.getElementById('email').addEventListener('blur', function() {
+        const email = this.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const existingError = this.parentElement.querySelector('.error-message');
+        if (existingError) existingError.remove();
+        this.classList.remove('border-red-500');
+        this.classList.add('border-gray-300');
+        
+        if (email && !emailRegex.test(email)) {
+            this.classList.add('border-red-500');
+            this.classList.remove('border-gray-300');
+            const errorMsg = document.createElement('p');
+            errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+            errorMsg.innerHTML = '<i class="fas fa-exclamation-circle mr-1"></i>Por favor, ingresa un correo electrónico válido.';
+            this.parentNode.insertBefore(errorMsg, this.nextSibling);
+        }
+    });
+</script>
+
+</body>
+</html>
